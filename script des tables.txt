@@ -1,0 +1,20 @@
+table demande : 
+
+CREATE TABLE `demande` ( `id_demande` int(11) NOT NULL, `type_demande` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL, 
+`commentaire` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL, `id_us` int(11) DEFAULT NULL, 
+`id_eta` int(11) DEFAULT '1', `priorite` int(3) DEFAULT '1', `id_employe` int(11) DEFAULT NULL, `id_responsable` 
+int(11) DEFAULT NULL ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+table etat: 
+
+CREATE TABLE `etat` ( `id_etat` int(11) NOT NULL, `libelle` varchar(100) NOT NULL ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+table role : 
+
+CREATE TABLE `role` ( `id_role` int(11) NOT NULL, `nom_role` varchar(100) NOT NULL ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+table user : 
+
+CREATE TABLE `user` ( `id_user` int(11) NOT NULL, `login` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL, 
+`mdp` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, 
+`id_role` int(11) NOT NULL DEFAULT '3' ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
